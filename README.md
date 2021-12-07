@@ -1,9 +1,10 @@
 # Three Categories
 Upcoming, Popular and Top Rated
-
-[![](https://github.com/MdSaifUddin/Utsav_Assignment/blob/master/Screenshots/Screen1.jpg)
-[![](https://github.com/MdSaifUddin/Utsav_Assignment/blob/master/Screenshots/Screen2.jpg)
-[![](https://github.com/MdSaifUddin/Utsav_Assignment/blob/master/Screenshots/Screen3.jpg)
+<p float="left">
+  <img src="/Screenshots/Screen1.jpg" width="100" />
+  <img src="/Screenshots/Screen2.jpg" width="100" /> 
+  <img src="/Screenshots/Screen3.jpg" width="100" />
+</p>
 
 # Description Screen
 
