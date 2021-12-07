@@ -62,7 +62,6 @@ class Description : AppCompatActivity() {
         })
 
         viewModel.desc.observe(this, {
-            binding.loading.visibility = View.GONE
             binding.title.text = it.original_title
             binding.date.text = it.release_date
             binding.overview.text = it.overview
@@ -101,22 +100,31 @@ class Description : AppCompatActivity() {
             }
 
             var homepage=it.homepage
-            binding.homepage.setOnClickListener {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(homepage)))
+            if(homepage!=""){
+                binding.homepage.setOnClickListener {
+                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(homepage)))
+                }
+            }else{
+                binding.homepage.visibility=View.GONE
             }
+
 
         })
 
         viewModel.key.observe(this, {
             var keyList = it.results
-            var key = keyList?.get(0)!!.key
-
-            binding.watchBtn.setOnClickListener {
-                var intent = Intent(this@Description, VideoPlayer::class.java)
-                intent.putExtra("id", key)
-                startActivity(intent)
-                Log.i("MovieKey", key.toString())
+            if(keyList.size>0){
+                var key = keyList?.get(0)!!.key
+                binding.watchBtn.setOnClickListener {
+                    var intent = Intent(this@Description, VideoPlayer::class.java)
+                    intent.putExtra("id", key)
+                    startActivity(intent)
+                    Log.i("MovieKey", key.toString())
+                }
+            }else{
+                binding.watchBtn.visibility=View.GONE
             }
+            binding.loading.visibility = View.GONE
         })
     }
 
