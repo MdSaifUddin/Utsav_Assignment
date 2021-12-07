@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/upcoming"
+        android:icon="@drawable/ic_baseline_upcoming_24"
+        android:title="Upcoming" />
+
+    <item
+        android:id="@+id/popular"
+        android:icon="@drawable/ic_baseline_ondemand_video_24"
+        android:title="Popular" />
+
+    <item
+        android:id="@+id/topRated"
+        android:icon="@drawable/ic_baseline_star_rate_24"
+        android:title="Top Rated" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_dashboard"-->
+<!--        android:icon="@drawable/ic_dashboard_black_24dp"-->
+<!--        android:title="@string/title_dashboard" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_notifications"-->
+<!--        android:icon="@drawable/ic_notifications_black_24dp"-->
+<!--        android:title="@string/title_notifications" />-->
+
+</menu>
